@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: order_items
+#
+#  id         :integer          not null, primary key
+#  flower_id  :integer
+#  quantity   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  order_id   :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flower_id: 1
+  quantity: 1
+
+two:
+  flower_id: 1
+  quantity: 1
