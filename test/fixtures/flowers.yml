@@ -4,10 +4,11 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  price      :integer
 #  created_at :datetime
 #  updated_at :datetime
-#  count      :integer
+#  sixcount   :integer
+#  eightcount :integer
+#  imagelink  :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

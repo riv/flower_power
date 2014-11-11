@@ -1,3 +1,129 @@
 // Place all the styles related to the Flowers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: "Lato", sans-serif;
+  h2{
+      margin: 0;     
+      color: white;
+      padding-top: 90px;
+      font-size: 52px;
+      font-family: "Lato", sans-serif; 
+      font-weight: 300;   
+  }
+  .item{
+      //background: #333;    
+      text-align: center;
+      height: 300px !important;
+      background-position: center;
+      background-attachment: fixed;
+  }
+  .item1 {
+    background-image: url("https://fortmillhsband.com/wp-content/uploads/2012/11/Red-Poinsettias.jpg") !important;
+  }
+  .item2{
+    background-image: url("/assets/Tapestry.jpg")
+  }
+  .item3{
+    background-image: url("/assets/MarbleStar.jpg")
+  }
+  .item4{
+    background-image: url("/assets/Maren.jpg")
+  }
+  .item5{
+    background-image: url("/assets/ChiantiRed.jpg")
+  }
+  .item6{
+    background-image: url("/assets/DaVinci.jpg")
+  }
+
+  .Transition {
+    width: 40%;
+    margin-top: 100px;
+    margin: 100px auto 100px auto;
+    text-align: center;
+    .transitionButton {
+      position: relative;
+      border: 1px solid black;
+      border-radius: 15px;
+      display: table;
+      padding: 20px 25px 20px 25px;
+      transition: background 2s, background-color 2s, color 2s, ease;
+      &:hover {
+        opacity: 0.5;
+        background-color: red;
+        h2 {
+          color: white;
+        }
+      }
+      h2 {
+        display: table-row;
+        text-decoration: none !important;
+        position: relative;
+        vertical-align: middle;
+        color: black;
+        text-align: center;
+      }
+    } 
+  }
+
+  .Selection {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    .card {
+      border: 1px solid black;
+      margin: 15px 0px 15px 0px;
+      text-align: center;
+      position: relative;
+      .utility {
+        position: relative;
+        .sixinch {
+          display: inline-block;
+        }
+        .eightInch {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+#nav {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 2em 0;
+  &.Dark {
+    #brandLink #nameHighlight {
+      color: white !important;
+    }
+    .btn.btn-default {
+      color: white;
+    }
+  }
+  #brandLink {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4em;
+    line-height: 1em;
+    color: red;
+    #nameHighlight {
+      color: green;
+    }
+    #cornellLogo {
+      color: #b31b1b;
+      font-family: "Crimson Text", serif;
+    }
+  }
+  .btn {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+  .btn-group {
+    .btn {
+      margin-left: 0;
+      &:first-child {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

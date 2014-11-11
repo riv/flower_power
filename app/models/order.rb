@@ -8,6 +8,7 @@
 #  pick_up_date   :string(255)
 #  created_at     :datetime
 #  updated_at     :datetime
+#  has_payed      :boolean
 #
 
 class Order < ActiveRecord::Base

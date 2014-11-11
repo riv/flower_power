@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.1.3'
 
 gem 'rails', '~> 4.1.4'
-gem 'react-rails'
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'kaminari'
 gem 'paperclip'
 gem 'net-http-spy'
@@ -13,6 +13,7 @@ gem 'dalli'
 gem 'memcachier'
 # To use ActiveModel has_secure_password
 gem 'bcrypt'
+gem 'cloudinary'
 
 group :development do
   gem 'guard-livereload', require: false
@@ -42,7 +43,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.4'
 gem 'compass-rails'
 gem 'coffee-rails', '~> 4.0.1'
 
