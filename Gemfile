@@ -7,7 +7,8 @@ gem 'kaminari'
 gem 'paperclip'
 gem 'net-http-spy'
 gem 'pg'
-gem 'mailgunner'
+gem 'rails_12factor', group: :production
+
 
 # For faster compilation and deploys
 gem 'dalli'
@@ -16,9 +17,10 @@ gem 'memcachier'
 gem 'bcrypt'
 gem 'cloudinary'
 
+gem 'figaro'
 group :development do
   gem 'guard-livereload', require: false
-  gem 'figaro'
+  
   gem 'annotate'
   gem 'guard-rspec'
   gem 'parallel_tests'
