@@ -5,6 +5,14 @@
   display: none;
 }
 
+.modal-header {
+  .close {
+    margin-top: -35px !important;
+  }
+}
+.modal-backdrop {
+  z-index: auto !important;
+}
 body {
   font-family: "Lato", sans-serif;
   .carousel-inner{
@@ -110,24 +118,46 @@ body {
       }
     }
     .cartDiv {
-      // position: fixed;
-      // top: px;
       .cartBanner {
         h2 {
           color: black;
         }
       }
-      .cartItem {
-        border: 1px solid black;
-        display: inline-block;
-        .sixinch {
+      .discountWell {
+        margin: 10px 0 10px 0;
+      }
+      .allItems {
+        margin-bottom: 10px;
+        max-height: 380px;
+        overflow: scroll;
+        .cartItem {
+          border: 1px solid black;
           display: inline-block;
-        }
-        .eightinch{
-          display: inline-block;
+          .sixinch {
+            display: inline-block;
 
+          }
+          .eightinch{
+            display: inline-block;
+          }
+          .removeOne {
+            background: none;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            background: black;
+            opacity: 0.3;
+            transition: opacity 1s;
+            &:hover {
+              opacity: 1.0
+            } 
+          }
         }
       }
+      .orderTotal {
+        display: inline-block;
+        margin-left: 30px;
+        }
       .deliveryOption {
         position: relative;
         display: inline-block;
@@ -141,6 +171,11 @@ body {
         .delivery {
           //display: inline-block;
           float: right;
+        }
+      }
+      .deliveryAddress {
+        .address{
+          margin-bottom: 20px;
         }
       }
       .pickupLocation {

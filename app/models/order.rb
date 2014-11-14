@@ -13,6 +13,7 @@
 #  delivery       :boolean
 #  total          :integer
 #  address        :string(255)
+#  cocunt         :integer
 #
 
 class Order < ActiveRecord::Base

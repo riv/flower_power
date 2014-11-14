@@ -148,11 +148,8 @@ cart = React.createClass
           className: 'cartBanner'
           children: [
             React.DOM.h2
-              children: 'Cart'
+              children: 'Cart: ' + @props.count + ' items'
           ]
-        React.DOM.div
-          className: 'allItems'
-          children: cartItems
         React.DOM.div
           className: 'totalBlock'
           children: [
@@ -161,87 +158,141 @@ cart = React.createClass
               children: [
                 React.DOM.h3
                   className: 'total'
-                  children: "Total: $" + @props.total + '.00'
+                  children: "Total: $" + (if @props.count >= 9 then @props.discountTotal.toFixed(2) else @props.total.toFixed(2))
               ]
           ]
         React.DOM.div
-          className: 'nameInput'
-          children: [
-            React.DOM.div
-              className: 'inputTag'
-              children: [
-                React.DOM.h5
-                  children: 'Name'
-              ]
-            React.DOM.input
-              className: 'input form-control'
-              id: 'customerName'
-              placeholder: 'Enter name'
-          ]
+          className: 'well discountWell'
+          children: 'A 7% discount will be applied if you order more than 9 items'
         React.DOM.div
-          className: 'phoneInput'
-          children: [
-            React.DOM.div
-              className: 'inputTag'
-              children: [
-                React.DOM.h5 
-                  children: 'Phone Number'
-              ]
-            React.DOM.input
-              className: 'input form-control phone_number'
-              id: 'customerPhoneNumber'
-              placeholder: 'xxx-xxx-xxxx'
-          ]
-        React.DOM.div
-          className: 'emailInput'
-          children: [
-            React.DOM.div
-              className: 'inputTag'
-              children: [
-                React.DOM.h5
-                  children: 'Email address'
-              ]
-            React.DOM.input
-              className: 'input form-control'
-              id: 'customerEmailAddress'
-              placeholder: 'Enter your email address'
-          ]
-        React.DOM.div
-          className: 'deliveryOption btn-group'
-          children: [
-            React.DOM.button
-              className: 'pickup btn btn-primary'
-              id: 'pickupButton'
-              onClick: @props.undelivery
-              children: 'Pickup'
-            React.DOM.button
-              className: 'delivery btn btn-primary'
-              id: 'deliveryButton'
-              onClick: @props.delivery
-              children: 'Delivery'
-          ]
-        React.DOM.div
-          className: 'pickupLocation well'
-          children: 'Pick up your order on December 8th at the Greenhouses from 8am-5pm. Cash, credit, and check are all accepted.'
-        React.DOM.div
-          className: 'deliveryAddress'
-          children: [
-            React.DOM.div
-              children: 'On Campus Address'
-            React.DOM.input
-              className: 'address form-control'
-            React.DOM.div
-              className:'well'
-              children: 'As of this year, we only deliver on campus. A $15.00 fee is applied to the total for delivery. All deliveries will be made December 8th. Payment in cash, credit, or check will be accepted upon delivery'
-          ]
+          className: 'allItems'
+          children: cartItems
         React.DOM.button
           type: 'button'
-          className: 'btn btn-success'
-          children: 'Submit your order'
-          onClick: @props.submit
+          className: 'btn btn-primary btn-lg'
+          'data-toggle': 'modal'
+          'data-target': '#myModal'  
+          children: 'Fill your order form'
         React.DOM.div
-          className: 'info well'
-          children: 'Once you submit your order, you will receive an email reciept and confirmation with further instructions'
+          className: 'modal fade'
+          id: 'myModal'
+          tabIndex: -1
+          role: 'dialog'
+          'aria-labelledby': 'myModalLabel'
+          'aria-hidden': 'true'
+          children: [
+            React.DOM.div
+              className: 'modal-dialog'
+              children: [
+                React.DOM.div
+                  className: 'modal-content'
+                  children: [
+                    React.DOM.div
+                      className: 'modal-header'
+                      children: [
+                        React.DOM.h2
+                          children: 'Order Form'
+                        React.DOM.button
+                          type: 'button'
+                          className: 'close'
+                          'data-dismiss': 'modal'
+                          'aria-hidden': 'true'
+                          children: "x"
+                      ]
+                    React.DOM.div
+                      className: 'modal-body'
+                      children: [
+                        React.DOM.div
+                          className: 'nameInput'
+                          children: [
+                            React.DOM.div
+                              className: 'inputTag'
+                              children: [
+                                React.DOM.h5
+                                  children: 'Name'
+                              ]
+                            React.DOM.input
+                              className: 'input form-control'
+                              id: 'customerName'
+                              placeholder: 'Enter name'
+                          ]
+                        React.DOM.div
+                          className: 'phoneInput'
+                          children: [
+                            React.DOM.div
+                              className: 'inputTag'
+                              children: [
+                                React.DOM.h5 
+                                  children: 'Phone Number'
+                              ]
+                            React.DOM.input
+                              className: 'input form-control phone_number'
+                              id: 'customerPhoneNumber'
+                              placeholder: 'xxx-xxx-xxxx'
+                          ]
+                        React.DOM.div
+                          className: 'emailInput'
+                          children: [
+                            React.DOM.div
+                              className: 'inputTag'
+                              children: [
+                                React.DOM.h5
+                                  children: 'Email address'
+                              ]
+                            React.DOM.input
+                              className: 'input form-control'
+                              id: 'customerEmailAddress'
+                              placeholder: 'Enter your email address'
+                          ]
+                        React.DOM.div
+                          className: 'deliveryOption btn-group'
+                          children: [
+                            React.DOM.button
+                              className: 'pickup btn btn-primary'
+                              id: 'pickupButton'
+                              onClick: @props.undelivery
+                              children: 'Pickup'
+                            React.DOM.button
+                              className: 'delivery btn btn-primary'
+                              id: 'deliveryButton'
+                              onClick: @props.delivery
+                              children: 'Delivery'
+                          ]
+                        React.DOM.div
+                          className: 'orderTotal'
+                          children: [
+                            React.DOM.h4
+                              children: 'Total: $' + (if @props.count >= 9 then @props.discountTotal.toFixed(2) else @props.total.toFixed(2))
+                          ]
+                        React.DOM.div
+                          className: 'pickupLocation well'
+                          children: 'Pick up your order on December 8th at the Greenhouses from 8am-5pm. Cash, credit, and check are all accepted.'
+                        React.DOM.div
+                          className: 'deliveryAddress'
+                          children: [
+                            React.DOM.div
+                              children: 'On Campus Address'
+                            React.DOM.input
+                              className: 'address form-control'
+                            React.DOM.div
+                              className:'well deliveryInfo'
+                              children: 'As of this year, we only deliver on campus. A $15 delivery fee is applied to the total for delivery. All deliveries will be made December 8th. Payment in cash, credit, or check will be accepted upon delivery'
+                          ]
+                        React.DOM.div
+                          className: 'info well'
+                          children: 'Once you submit your order, you will receive an email reciept and confirmation with further instructions'
+                      ] 
+                    React.DOM.div
+                      className: 'modal-footer'
+                      children: 
+                        React.DOM.button
+                          type: 'button'
+                          className: 'btn btn-success'
+                          children: 'Submit your order'
+                          onClick: @props.submit
+                  ]
+              ]
+          ]
       ]
 
 c = React.createClass
@@ -256,46 +307,60 @@ c = React.createClass
         sixcount: 0
         eightcount: 0
       i++
-    { selected: initialArray, flowers: flowers, total: 0, deliveryFeeApplied: false }
+    { selected: initialArray, flowers: flowers, total: 0, deliveryFeeApplied: false, count: 0, discountTotal: 0 }
   onClick: (e) ->
     index = parseInt(e.target.getAttribute('data-index'), 10)
     f = @state.flowers[index]
     s = e.target.getAttribute('data-size')
     item = @state.selected[index].cartItem
     total = @state.total
+    count = @state.count
     # TODO: Set CSS declaratively
     if s == 'six'
       item.sixcount++
+      count++
       total = total + 13
       f.sixcount--
     else
       item.eightcount++
+      count++
       total = total + 18
       f.eightcount--
+    if count >= 9
+      discountTotal = total * .93
+    else
+      discountTotal = total
     newSelected = @state.selected
     newSelected[index].cartItem = item
     newFlowers = @state.flowers
     newFlowers[index] = f
-    @setState({ selected: newSelected, flowers: newFlowers, total: total, deliveryFeeApplied: @state.deliveryFeeApplied})
+    @setState({ selected: newSelected, flowers: newFlowers, total: total, deliveryFeeApplied: @state.deliveryFeeApplied, count: count, discountTotal: discountTotal})
   remove: (e) ->
      index = parseInt(e.target.getAttribute('data-index'), 10)
      f = @state.flowers[index]
      s = e.target.getAttribute('data-size')
      item = @state.selected[index].cartItem
      total = @state.total
+     count = @state.count
      if s == 'six'
        item.sixcount--
+       count--
        total = total - 13
        f.sixcount++
      else 
        item.eightcount--
+       count--
        total = total - 18
        f.eightcount++
+     if count >= 9
+       discountTotal = total * .93
+     else
+       discountTotal = total
      newSelected = @state.selected
      newSelected[index].cartItem = item
      newFlowers = @state.flowers
      newFlowers[index] = f
-     @setState({selected: newSelected, flowers: newFlowers, total: total, deliveryFeeApplied: @state.deliveryFeeApplied})
+     @setState({selected: newSelected, flowers: newFlowers, total: total, deliveryFeeApplied: @state.deliveryFeeApplied, count: count, discountTotal: discountTotal})
   delivery: (e) ->
     d = $('.deliveryAddress')
     p = $('.pickupLocation')
@@ -303,8 +368,9 @@ c = React.createClass
     p.slideUp()
     d.slideDown()
     total = @state.total + 15
+    discountTotal = @state.discountTotal + 15
     if !@state.deliveryFeeApplied
-      @setState({selected: @state.selected, flowers: @state.flowers, total: total, deliveryFeeApplied: true})
+      @setState({selected: @state.selected, flowers: @state.flowers, total: total, deliveryFeeApplied: true, count: @state.count, discountTotal: discountTotal})
   undelivery: (e) ->
     d = $('.deliveryAddress')
     p = $('.pickupLocation')
@@ -312,8 +378,9 @@ c = React.createClass
     d.slideUp()
     p.slideDown()
     total = @state.total - 15
+    discountTotal = @state.discountTotal - 15
     if @state.deliveryFeeApplied
-      @setState({selected: @state.selected, flowers: @state.flowers, total: total, deliveryFeeApplied: false})
+      @setState({selected: @state.selected, flowers: @state.flowers, total: total, deliveryFeeApplied: false, count: @state.count, discountTotal: discountTotal })
   submit: (e) ->
     console.log('submit clicked')
     console.log(@state.selected)
@@ -325,6 +392,7 @@ c = React.createClass
         console.log(selection_for_preorder)
     console.log(selection_for_preorder)
     console.log($('#customerPhoneNumber').val())
+    finalBill = if @state.count >= 9 then @state.discountTotal else @state.total
     params = {
       order: JSON.stringify(selection_for_preorder)
       name: $('#customerName').val()
@@ -332,7 +400,8 @@ c = React.createClass
       email: $('#customerEmailAddress').val()
       address: $('.address').val()
       delivery: @state.deliveryFeeApplied
-      total: @state.total
+      total: finalBill
+      count: @state.count
     }
     $.ajax({
       type: 'POST'
@@ -355,7 +424,7 @@ c = React.createClass
           children: layout({clickHandler: @onClick, flowers: @state.flowers, selected: @state.selected})
         React.DOM.div
           className: 'col-md-3'
-          children: cart({total: @state.total, selected: @state.selected, remove: @remove, delivery: @delivery, undelivery: @undelivery, submit: @submit})
+          children: cart({total: @state.total, selected: @state.selected, remove: @remove, delivery: @delivery, undelivery: @undelivery, submit: @submit, count: @state.count, discountTotal: @state.discountTotal})
       ]
 
 React.renderComponent(c(), document.getElementById('s'));
