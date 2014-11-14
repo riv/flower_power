@@ -50,32 +50,4 @@ class OrdersController < ApplicationController
     
 end
 
-# {
-#   "order"=> "[{
-#     "cartItem":{
-#       "flower":{
-#         "id":3,
-#         "name":"Christmas Beauty Nostalgia",
-#         "created_at":"2014-11-12T21:34:48.595Z",
-#         "updated_at":"2014-11-12T21:34:48.595Z",
-#         "sixcount":18,
-#         "eightcount":2,
-#         "imagelink":"ChristmasBeautyNostalgia.jpg"
-#       }, 
-#       "sixcount":0, 
-#       "eightcount":1
-#     }
-#   }]", 
-#     "name"=>"",
-#     "phone_number"=>"", 
-#     "email"=>"", 
-#     "delivery"=>"false", 
-#     "total"=>"18", 
-#     "controller"=>"orders", 
-#     "action"=>"create"
-# }
-
-
-
-
 
