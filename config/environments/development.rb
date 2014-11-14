@@ -35,15 +35,15 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
+   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => ENV['MAILGUN_SMTP_DOMAIN'],
-    :authentication => :plain
+    :domain         => 'fl0w3rp0w3r.herokuapp.com',
+    :authentication => :plain,
   }
+  ActionMailer::Base.delivery_method = :smtp
 
 #   config.action_mailer.delivery_method = :smtp
 #   config.action_mailer.smtp_settings = {
