@@ -41,6 +41,7 @@ class OrdersController < ApplicationController
       @success = true
       flash[:orderSuccess] = "Thank you for your order! You will receive a confirmation email at " + newOrder.customer_email + " shortly!"
       OrderMailer.order_email(newOrder).deliver
+      OrderMailer.logs(newOrder).deliver
     end
 
     respond_to do |format|

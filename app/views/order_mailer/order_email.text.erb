@@ -9,7 +9,7 @@ Your order is listed below:
 
 <% end %>
 
-Your total is $<%= @order.total %>
+Your total is $<%= @order.total.to_s + '0' %>
 
 <% if @order.delivery %>
 Your delivery will be made to this address: <%= @order.address %> on December 8th
