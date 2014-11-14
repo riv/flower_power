@@ -342,7 +342,7 @@ c = React.createClass
       success: (resp) ->
         if resp.success
           alert('Your transaction went through — check your email for your order confirmation and pickup/delivery information.')
-          #window.location.reload(true)
+          window.location.reload(true)
         else
           alert(resp.errors)
     })
