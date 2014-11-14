@@ -25,22 +25,22 @@ body {
       background-attachment: fixed;
   }
   .item1 {
-    background-image: url("https://fortmillhsband.com/wp-content/uploads/2012/11/Red-Poinsettias.jpg") !important;
+    background-image: image-url("https://fortmillhsband.com/wp-content/uploads/2012/11/Red-Poinsettias.jpg") !important;
   }
   .item2{
-    background-image: url("/assets/Tapestry.jpg")
+    background-image: image-url("/assets/Tapestry.jpg")
   }
   .item3{
-    background-image: url("/assets/MarbleStar.jpg")
+    background-image: image-url("/assets/MarbleStar.jpg")
   }
   .item4{
-    background-image: url("/assets/Maren.jpg")
+    background-image: image-url("/assets/Maren.jpg")
   }
   .item5{
-    background-image: url("/assets/ChiantiRed.jpg")
+    background-image: image-url("/assets/ChiantiRed.jpg")
   }
   .item6{
-    background-image: url("/assets/DaVinci.jpg")
+    background-image: image-url("/assets/DaVinci.jpg")
   }
   .sizeComparison {
     h2 {

@@ -7,7 +7,6 @@ gem 'kaminari'
 gem 'paperclip'
 gem 'net-http-spy'
 gem 'pg'
-gem 'rails_12factor', group: :production
 
 
 # For faster compilation and deploys
