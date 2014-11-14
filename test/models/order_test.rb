@@ -13,7 +13,7 @@
 #  delivery       :boolean
 #  total          :integer
 #  address        :string(255)
-#  cocunt         :integer
+#  count          :integer
 #
 
 require 'test_helper'

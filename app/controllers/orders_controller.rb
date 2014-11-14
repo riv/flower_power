@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
     newOrder.name = params['name']
     newOrder.phone_number = params['phone_number']
     newOrder.delivery = params['delivery']
-    newOrder.delivery = params['address']
+    newOrder.address = params['address']
     newOrder.count = params['count']
     newOrder.total = (params['total'].to_i > 0) ? (params['total']) : (nil)
     newOrder.has_payed = false
