@@ -1,5 +1,5 @@
 class OrderMailer < ActionMailer::Base
-  default from: "Cornell Hortus Forum"
+  default from: "test@example.com"
 
   def order_email(order)
     @url = '/'
