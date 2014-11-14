@@ -11,7 +11,7 @@
 #  has_payed      :boolean
 #  name           :string(255)
 #  delivery       :boolean
-#  total          :integer
+#  total          :float
 #  address        :string(255)
 #  count          :integer
 #

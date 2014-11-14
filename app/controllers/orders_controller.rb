@@ -10,9 +10,9 @@ class OrdersController < ApplicationController
     newOrder.delivery = params['delivery']
     newOrder.address = params['address']
     newOrder.count = params['count']
-    newOrder.total = (params['total'].to_i > 0) ? (params['total']) : (nil)
+    newOrder.total = (params['total'].to_f > 0) ? (params['total'].to_f) : (nil)
     newOrder.has_payed = false
-    p newOrder
+    p newOrder.total
     newOrder.save
     @orderErrors = newOrder.errors.full_messages
     p @orderErrors
