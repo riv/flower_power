@@ -2,7 +2,7 @@ class OrderMailer < ActionMailer::Base
   default from: "hortusforum-l@cornell.edu"
 
   def order_email(order)
-    @url = 'https://www.poinsettia.herokuapp.com'
+    @url = 'https://poinsettia.herokuapp.com'
     @order = order
     items = order.order_items
     @order_items = []
