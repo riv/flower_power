@@ -9,6 +9,10 @@
 #  created_at     :datetime
 #  updated_at     :datetime
 #  has_payed      :boolean
+#  name           :string(255)
+#  delivery       :boolean
+#  total          :integer
+#  address        :string(255)
 #
 
 require 'test_helper'

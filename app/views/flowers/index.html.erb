@@ -1,0 +1,122 @@
+'<!-- <div class='container' id='renderContainer'></div>-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Crimson+Text' rel='stylesheet' type='text/css'>
+<div class="hidden" id='flowerjson'><%= @flowers.to_json %></div>
+<section class="Header">
+  <nav id='nav' role="navigation" class="">
+    <div class='container'>
+      <div class="row">
+      <a class='pull-left' id='brandLink' href='/'><span id='cornellLogo'>Cornell </span><span id='nameHighlight'>Hortus Forum</span></a>
+      <button type='button' class='btn btn-default navbar-btn btn-outline btn-black pull-right' id='contact' data-toggle='modal' data-target='#login'>Contact Us</button>
+      </div>
+    </div>
+  </nav>
+</section>
+<section class="Carousel">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+
+    </ol>   
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        <div class="item active item1">
+            <h2>Welcome to our Holiday Poinsettia Sale!</h2>
+            <div class="carousel-caption">
+              <!-- <h3>Welcome to our Annual Poinsettia Sale!</h3>
+              <p></p> -->
+            </div>
+        </div>
+        <div class="item item2">
+            <h2>Browse through our amazing selection of poinsettia!</h2>
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item item3">
+            <h2>All delivery orders will be delivered on December 8th</h2>
+            <div class="carousel-caption">
+              <!-- <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna vel…</p> -->
+            </div>
+        </div>
+        <div class="item item4">
+            <h2>All pickup orders will be available for pickup from 8am-5pm December 5th</h2>
+            <div class="carousel-caption">
+<!--               <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna vel…</p> -->
+            </div>
+        </div>
+        <div class="item item5">
+            <h2>Chianti Red</h2>
+            <div class="carousel-caption">
+<!--               <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna vel…</p> -->
+            </div>
+        </div>
+        <div class="item item6">
+            <h2>Click below to view our collection and order form</h2>
+            <div class="carousel-caption">
+              <h3></h3>
+<!--               <p>Praesent commodo cursus magna vel…</p> -->
+            </div>
+        </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+</section>
+<section class="Transition">
+  <div class='t'>
+    <% if @success %>
+      <div class='alert alert-success'>
+        <%= @orderSuccessMessage%>
+      </div>
+    <% end %>
+    <div class='row'>
+        <div class='transitionButton'>
+          <h3>Browse our selection</h3>
+        </div>
+    </div>
+  </div>
+</section>
+<section class="sizeComparison">
+  <div class='size'>
+    <h2 class='comparison'>Our poinsettias come in two pot sizes</h2>
+    <img src="8 inch vs 6 inch.jpg" width="600" height="450">
+    <h3>8" : $18 vs 6" : $13</h3>
+  </div>
+</section>
+<section class="Selection container" id='s'>
+<!--   <div class='col-md-9'>
+    <div class='col-md-9'>
+    <% @flowers.each do |f| %>
+      <div class='card col-md-3'>
+        <div class='flowerName'><%=f.name%></div>
+        <div class='flowerPhoto'>
+          <%= image_tag f.imagelink, width:180, height:120  %>
+        </div>
+        <div class='utility'>
+          <div class='sixInch'>
+          <div class='stock'>6": <%= f.sixcount%> left</div>
+            <button type='button' class='add'> Add one to cart </button>
+          </div>
+          <div class='eightInch'>
+            <div class='stock'>8": <%= f.eightcount %> left</div>
+            <button type='button' class='add'> Add one to cart </button>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div> 
+  </div> -->
+</section>

@@ -7,6 +7,7 @@ gem 'kaminari'
 gem 'paperclip'
 gem 'net-http-spy'
 gem 'pg'
+gem 'mailgunner'
 
 # For faster compilation and deploys
 gem 'dalli'

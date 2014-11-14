@@ -26,6 +26,7 @@ Flowers.create(name:'Mars White', sixcount: 18, eightcount: 3, imagelink:'MarsWh
 Flowers.create(name:'Monet', sixcount: 18, eightcount: 3, imagelink:'Monet.jpg')
 Flowers.create(name:'Orion Red', sixcount: 18, eightcount: 3, imagelink:'OrionRed.jpg')
 Flowers.create(name:'Peterstar Red', sixcount: 18, eightcount: 3, imagelink:'PeterstarRed.jpg')
+Flowers.create(name:'Peterstar White', sixcount: 18, eightcount: 3, imagelink:'PeterstarWhite.jpg')
 Flowers.create(name:'Prestige Maroon', sixcount: 18, eightcount: 3, imagelink:'PrestigeMaroon.jpg')
 Flowers.create(name:'Red Glitter', sixcount: 18, eightcount: 3, imagelink:'RedGlitter.jpg')
 Flowers.create(name:'Ruby Frost', sixcount: 18, eightcount: 3, imagelink:'RubyFrost.jpg')

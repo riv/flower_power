@@ -1,0 +1,26 @@
+Dear <%= @order.name %>,
+
+We have successfully receieved your order. Your order id is: <%= @order.id%>
+
+Your order is listed below:
+
+<% @order_items.each do |i| %>
+  <%=i[:name]%>: <%=i[:sixcount]%> six inch pot(s) and <%= i[:eightcount]%> eight inch pot(s) 
+
+<% end %>
+
+Your total is $<%= @order.total %>
+
+<% if @order.delivery %>
+Your delivery will be made to this address: <%= @order.address %> on December 8th
+<% else %>
+You may pickup your order on December 8th at this following address (Greenhouse B)
+<% end %>
+
+Payment information: Cash, check or credit card will be accepted upon delivery or pickup. 
+
+To revisit the site, just follow this link: <%= @url %>.
+
+Thanks you for ordering and have a great day!
+
+-Cornell Hortus Forum

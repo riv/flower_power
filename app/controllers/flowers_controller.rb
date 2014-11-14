@@ -2,7 +2,11 @@ class FlowersController < ApplicationController
 
   def index
     @flowers = Flowers.all
-    # p @flowers
+    @success = false
+    if flash[:orderSuccess]
+      @success = true
+      @orderSuccessMessage = flash[:orderSuccess]
+    end
   end
 
 end

@@ -1,15 +1,21 @@
 // Place all the styles related to the Flowers controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass ;(SCSS) here: http://sass-lang.com/
+.hidden {
+  display: none;
+}
+
 body {
   font-family: "Lato", sans-serif;
-  h2{
+  .carousel-inner{
+    h2 {
       margin: 0;     
       color: white;
       padding-top: 90px;
       font-size: 52px;
       font-family: "Lato", sans-serif; 
-      font-weight: 300;   
+      font-weight: 300;
+    }
   }
   .item{
       //background: #333;    
@@ -36,7 +42,18 @@ body {
   .item6{
     background-image: url("/assets/DaVinci.jpg")
   }
-
+  .sizeComparison {
+    h2 {
+      color: black;
+      font-family: "Lato";
+    }
+    h3 {
+      font-family: "Lato";
+    }
+    .size {
+      text-align: center;
+    }
+  }
   .Transition {
     width: 40%;
     margin-top: 100px;
@@ -46,19 +63,19 @@ body {
       position: relative;
       border: 1px solid black;
       border-radius: 15px;
-      display: table;
-      padding: 20px 25px 20px 25px;
+      padding: 20px 25px 20px 25px;        
       transition: background 2s, background-color 2s, color 2s, ease;
       &:hover {
         opacity: 0.5;
         background-color: red;
         h2 {
+          text-decoration: none !important;
           color: white;
         }
       }
       h2 {
-        display: table-row;
         text-decoration: none !important;
+        display: table-row;
         position: relative;
         vertical-align: middle;
         color: black;
@@ -73,16 +90,69 @@ body {
     .card {
       border: 1px solid black;
       margin: 15px 0px 15px 0px;
-      text-align: center;
-      position: relative;
+      .flowerName {
+        padding: 10px 0px 10px 0px;
+      }
+      .flowerImage {
+        padding: 0px 10px 10px 10px;
+      }
       .utility {
         position: relative;
-        .sixinch {
-          display: inline-block;
+        padding-bottom: 60px;
+        .sixInch {
+          display: inline-block !important;
+          float: left;
         }
         .eightInch {
           display: inline-block;
+          float: right;
         }
+      }
+    }
+    .cartDiv {
+      // position: fixed;
+      // top: px;
+      .cartBanner {
+        h2 {
+          color: black;
+        }
+      }
+      .cartItem {
+        border: 1px solid black;
+        display: inline-block;
+        .sixinch {
+          display: inline-block;
+        }
+        .eightinch{
+          display: inline-block;
+
+        }
+      }
+      .deliveryOption {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .pickup {
+          //display: inline-block;
+          float: left;
+        }
+        .delivery {
+          //display: inline-block;
+          float: right;
+        }
+      }
+      .pickupLocation {
+        display: none;
+        margin-bottom: 20px;
+      }
+      .deliveryAddress {
+        display: none;
+        margin-bottom: 20px;
+      }
+      .info {
+        margin-top: 20px;
       }
     }
   }
