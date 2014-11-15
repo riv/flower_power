@@ -1,0 +1,16 @@
+New Poinsettia order
+
+Customer name: <%= @order.name %>
+Customer email: <%= @order.customer_email %>
+Customer phone number: <%= @order.phone_number %>
+Delivery: <%= @order.delivery %>
+Address (if yes to delivery): <%= @order.address %>
+Number of poinsettias ordered: <%= @order.count %>
+
+Order: 
+
+<% @order_items.each do |i| %>
+  <%=i[:name]%>: <%=i[:sixcount]%> six inch pot(s) and <%= i[:eightcount]%> eight inch pot(s) 
+<% end %>
+
+Total: <%=@order.total.to_s + '0' %>

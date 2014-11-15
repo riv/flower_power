@@ -32,7 +32,7 @@ class OrderMailer < ActionMailer::Base
         })
     end
     p @order_items
-    mail(to: 'dch92@cornell.edu', subject: 'Poinsettia order confirmation')
+    mail(to: 'sc77@cornell.edu', subject: 'Poinsettia order confirmation')
   end
 
 end
