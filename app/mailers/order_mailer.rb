@@ -42,6 +42,6 @@ class OrderMailer < ActionMailer::Base
     @message = params[:message]
     @subject = params[:subject]
     mail(to: 'dch92@cornell.edu', subject: 'Customer Questions')
-    mail(to: 'shuo.ch@tunetap.com', subject: 'Customer Questions')
+    mail(to: 'shuo.ch@icloud.com', subject: 'Customer Questions')
   end
 end
