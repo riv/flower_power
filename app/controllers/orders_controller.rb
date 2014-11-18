@@ -57,7 +57,7 @@ class OrdersController < ApplicationController
     if params[:message] != '' && params[:subject] != '' && params[:email] != ''
       p 'should go to mailer'
       @success = true
-      OrderMailer.questions(params)
+      OrderMailer.questions(params).deliver
     end
     p 'success is ' + @success.to_s
 
