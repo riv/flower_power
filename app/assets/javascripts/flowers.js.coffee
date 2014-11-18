@@ -18,6 +18,26 @@ $(document).ready ->
     , 1000
   return
 
+$("#questions").click ->
+  params = {
+            email: $('#messageEmail').val(),
+            subject: $('#messageSubject').val(),
+            orderID: $('#orderID').val(), 
+            message: $('#questionInput').val()
+           }
+  $.ajax({
+      type: 'POST'
+      url: '/orders/questions'
+      data: params
+      dataType: 'JSON'
+      success: (resp) ->
+        if resp.success
+          alert('Thank you for submitting your question! We will get back to you promptly')
+          window.location.reload(true)
+        else
+          alert('Please fill in your email, message subject and message')
+    })
+
 $(document).ready ->
   # Stick the #nav to the top of the window
   nav = $(".cartDiv")

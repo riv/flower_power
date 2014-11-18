@@ -48,6 +48,24 @@ class OrdersController < ApplicationController
       format.json { render json: { success: @success, errors: @orderErrors} }
     end
   end
+
+  def questions
+    #p '/////////////////////////////'
+    #p params
+    #p '/////////////////////////////'
+    @success = false
+    if params[:message] != '' && params[:subject] != '' && params[:email] != ''
+      p 'should go to mailer'
+      @success = true
+      OrderMailer.questions(params)
+    end
+    p 'success is ' + @success.to_s
+
+    flash[:messageSuccess] = "Thank you for your message! We will reply to you as soon as possible"
+    respond_to do |format|
+      format.json { render json: {success: @success}}
+    end
+  end
     
 end
 

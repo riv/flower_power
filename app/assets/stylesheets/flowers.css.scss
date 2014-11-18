@@ -10,11 +10,26 @@
     margin-top: -35px !important;
   }
 }
+
+.contactInputs {
+  #messageSubject {
+    display: inline-block;
+  }
+  #orderID {
+    display: inline-block;
+  }
+  #questionInput {
+    width: 100%;
+    height: 200px;
+  }
+}
+
 .modal-backdrop {
   z-index: auto !important;
 }
 body {
   font-family: "Lato", sans-serif;
+
   .carousel-inner{
     h2 {
       margin: 0;     

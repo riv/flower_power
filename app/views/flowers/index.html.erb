@@ -7,11 +7,43 @@
       <div class="row">
       <a class='pull-left' id='brandLink' href='/'><span id='cornellLogo'>Cornell </span><span id='nameHighlight'>Hortus Forum</span></a>
       <button type='button' class='btn btn-default navbar-btn btn-outline btn-black pull-right' id='contact' data-toggle='modal' data-target='#login'>
-      <a class="mailto" href="mailto:dch92@cornell.edu?subject=Poinsettia Order Questions">Contact Us</a>
+      <a class="mailto" data-toggle="modal" data-target="#contactModal">Contact Us</a>
 </button>
       </div>
     </div>
   </nav>
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contact us</h4>
+      </div>
+      <div class="modal-body contactInputs">
+        <div>
+          <p>Email Address: </p>
+          <input type='email' id='messageEmail'></input>
+        </div>
+        <div>
+          <p>Subject: </p>
+          <input type='text' id='messageSubject'></input>
+        </div>
+        <div>
+          <p>Order Number (if applicable): </p>
+          <input type='text' id='orderID'></input>
+        </div>
+        <div>
+          <p>Message: </p>
+          <textarea type='text' id='questionInput'></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id='questions' class="btn btn-primary">Send your message</button>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 <section class="Carousel">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -82,6 +114,7 @@
     <% if @success %>
       <div class='alert alert-success'>
         <%= @orderSuccessMessage%>
+        <%= @contactUsSuccess %>
       </div>
     <% end %>
     <div class='row'>

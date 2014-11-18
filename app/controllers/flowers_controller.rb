@@ -7,6 +7,9 @@ class FlowersController < ApplicationController
       @success = true
       @orderSuccessMessage = flash[:orderSuccess]
     end
+    if flash[:messageSuccess]
+      @contactUsSuccess = flash[:messageSuccess]
+    end
   end
 
 end
