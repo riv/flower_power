@@ -286,7 +286,7 @@ cart = React.createClass
                           ]
                         React.DOM.div
                           className: 'pickupLocation well'
-                          children: 'Pick up your order on December 8th at Ken Post Laboratory, Ithaca NY from 8am-5pm. Cash, credit, and check are all accepted.'
+                          children: 'Pick up your order on December 8th at Ken Post Labs (512 Tower Road Greenhouse 130, Ithaca NY) from 8am-5pm. Cash, credit, and check are all accepted.'
                         React.DOM.div
                           className: 'deliveryAddress'
                           children: [
