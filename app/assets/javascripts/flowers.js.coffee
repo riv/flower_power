@@ -75,8 +75,8 @@ layout = React.createClass
             React.DOM.img
               className: 'flowerImage'
               src: @props.flowers[i].imagelink
-              width: "250px"
-              height: "180px"
+              width: "200x"
+              height: "266px"
             React.DOM.div
               className: 'utility'
               children: [
