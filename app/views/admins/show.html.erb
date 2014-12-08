@@ -33,15 +33,15 @@
           <div> <%= i[:order].total%></div>
         </div>
       </div>
-      <div class="itemRow">
-        <% i[:items].each do | a |%>
-          <div>
-            Flower id: <%= a.flower_id %>
-          </div>
-          <div>Sixcount : <%= a.sixquantity %></div>
-          <div>Eightcount : <%= a.eightquantity%></div>
-        <%end%>
-      </div>
+      <% i[:items].each do | a |%>
+        <div class="itemRow">
+            <div>
+              Flower id: <%= a.flower_id %>
+            </div>
+            <div>Sixcount : <%= a.sixquantity %></div>
+            <div>Eightcount : <%= a.eightquantity%></div> 
+        </div>
+      <%end%>
     </div>
   <%end%>
 </div>
