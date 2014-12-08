@@ -32,6 +32,15 @@
           <div> <%= i[:order].total%></div>
         </div>
       </div>
+      <div class="itemRow">
+        <% i[:items].each do | a |%>
+          <div>
+            <%= @flowers[a.flower_id].name %>
+          </div>
+          <div>Sixcount : <%= a.sixquantity %></div>
+          <div>Eightcount : <%= a.eightquantity%></div>
+        <%end%>
+      </div>
     </div>
   <%end%>
 </div>
