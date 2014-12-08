@@ -4,8 +4,14 @@
 .boxInfo {
   display: inline-block;
   margin: 10px 10px 10px 10px;
+  padding-left: 10px;
 }
 
 .itemRow {
   display: inline-block;
+}
+
+#cards {
+  border: 2px solid black;
+  border-radius: 5px;
 }
