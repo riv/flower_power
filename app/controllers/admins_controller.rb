@@ -6,10 +6,11 @@ class AdminsController < ApplicationController
     flowers = Flowers.all
     @flowers = flowers.sort_by { |k| k["id"]}
     Order.all.each do |i|
-      a = {order: i,
-           items: i.order_items}
-      @fullorders.push(a)
-      p @fullorders
+      if i.cancelled != true
+        a = {order: i,
+             items: i.order_items}
+        @fullorders.push(a)
+      end
     end
   end
 
