@@ -11,9 +11,10 @@
 #  has_payed      :boolean
 #  name           :string(255)
 #  delivery       :boolean
-#  total          :float
 #  address        :string(255)
 #  count          :integer
+#  total          :float
+#  cancelled      :boolean
 #
 
 class Order < ActiveRecord::Base
@@ -27,4 +28,35 @@ class Order < ActiveRecord::Base
   validates :name, presence: true
   validates :delivery, absence: false
   validates :total, presence: true
+
+  def remove_order
+    
+  end
+
+# to_be_removed = OrderItems.where("order_id = 64")
+# a = to_be_removed.order_items
+# a.each do | i | 
+#   f = Flowers.find_by_id(i.flower_id)
+#   f.sixcount = f.sixcount + i.sixcount
+#   f.eightcount = f.eightcount + i.eightcount
+# end
+
+# to_be_removed.each do | i| 
+# f = Flowers.find_by_id(i.flower_id)
+# f.sixcount = f.sixcount + i.sixquantity
+# f.eightcount = f.eightcount + i.eightquantity
+# f.save
+# end
+# to_be_removed.each do | i| 
+# f = Flowers.find_by_id(i.flower_id)
+# p f
+# end
+
+
+
+# to_be_removed.cancelled = true
+# to_be_removed.save
+
+
+
 end

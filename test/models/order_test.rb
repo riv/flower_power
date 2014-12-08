@@ -11,9 +11,10 @@
 #  has_payed      :boolean
 #  name           :string(255)
 #  delivery       :boolean
-#  total          :float
 #  address        :string(255)
 #  count          :integer
+#  total          :float
+#  cancelled      :boolean
 #
 
 require 'test_helper'

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
     root 'flowers#index'
     post '/orders' => 'orders#create'
     post '/orders/questions' => 'orders#questions'
+    get    'login'   => 'sessions#new'
+    post   'login'   => 'sessions#create'
+    delete 'logout'  => 'sessions#destroy'
+    get 'console2232' => 'admins#show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

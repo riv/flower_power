@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114225524) do
+ActiveRecord::Schema.define(version: 20141208011847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20141114225524) do
     t.string   "address"
     t.integer  "count"
     t.float    "total"
+    t.boolean  "cancelled"
   end
 
   create_table "sessions", force: true do |t|
