@@ -1,0 +1,48 @@
+<div class='hidden' id='orderJson'><%=@fullorders.to_json%></div>
+<div class="container">
+  <% @fullorders.each do | i | %>
+    <div class="orderCards">
+      <div class="infoRow row">
+        <div class="boxInfo">
+          <p>Order ID:</p>
+          <div> <%= i[:order].id%></div>
+        </div>
+        <div class="boxInfo">
+          <p>Email:</p>
+          <div> <%= i[:order].customer_email%></div>
+        </div>
+        <div class="boxInfo">
+          <p>Phone Number:</p>
+          <div> <%= i[:order].phone_number%></div>
+        </div>
+        <div class="boxInfo">
+          <p>Name:</p>
+          <div> <%= i[:order].name%></div>
+        </div>
+        <div class="boxInfo">
+          <p>Delivery:</p>
+          <div> <%= i[:order].delivery%></div>
+        </div>
+        <div class="boxInfo">
+          <p>Address:</p>
+          <div> <%= i[:order].address%></div>
+        </div>
+        <div class="boxInfo">
+          <p>Total:</p>
+          <div> <%= i[:order].total%></div>
+        </div>
+
+<!--         <button type='button' class="btn btn-primary">Have payed</button>
+ -->      </div>
+      <div class="itemRow">
+        <% i[:items].each do | a |%>
+          <div>
+            <%= @flowers[a.flower_id].name %>
+          </div>
+          <div>Sixcount : <%= a.sixquantity %></div>
+          <div>Eightcount : <%= a.eightquantity%></div>
+        <%end%>
+      </div>
+    </div>
+  <%end%>
+</div>
