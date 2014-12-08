@@ -1,5 +1,6 @@
 <div class='hidden' id='orderJson'><%=@fullorders.to_json%></div>
 <div class="container">
+<div class="col-md-8">
   <% @fullorders.each do | i | %>
     <div class="orderCards">
       <div class="infoRow row">
@@ -35,11 +36,7 @@
       <div class="itemRow">
         <% i[:items].each do | a |%>
           <div>
-            <%if (@flowers[a.flower_id].name).nil? %>
-            <%= a.flower_id %>
-            <%else %>
-            <%= @flowers[a.flower_id].name %>
-            <%end%>
+            Flower id: <%= a.flower_id %>
           </div>
           <div>Sixcount : <%= a.sixquantity %></div>
           <div>Eightcount : <%= a.eightquantity%></div>
@@ -47,4 +44,12 @@
       </div>
     </div>
   <%end%>
+</div>
+<div class="col-md-4">
+  <%@flowers.each do | i |%>
+    <div class="row">
+      Flower ID: <%= i.id%> Name: <%=i.name %>
+    </div>
+  <%end%>
+</div>
 </div>

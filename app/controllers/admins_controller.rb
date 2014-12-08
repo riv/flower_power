@@ -3,7 +3,8 @@ class AdminsController < ApplicationController
 
   def show
     @fullorders = []
-    @flowers = Flowers.all
+    flowers = Flowers.all
+    @flowers = flowers.sort_by { |k| k["id"]}
     Order.all.each do |i|
       a = {order: i,
            items: i.order_items}
