@@ -35,7 +35,9 @@
       <div class="itemRow">
         <% i[:items].each do | a |%>
           <div>
-            <%if @flowers != [] %>
+            <%if (@flowers[a.flower_id].name).nil? %>
+            <%= a.flower_id %>
+            <%else %>
             <%= @flowers[a.flower_id].name %>
             <%end%>
           </div>
