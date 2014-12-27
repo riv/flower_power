@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     get    'login'   => 'sessions#new'
     post   'login'   => 'sessions#create'
     delete 'logout'  => 'sessions#destroy'
-    get 'console2232' => 'admins#show'
+    # get 'console2232' => 'admins#show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
