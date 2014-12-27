@@ -32,7 +32,7 @@ class OrderMailer < ActionMailer::Base
         })
     end
     p @order_items
-    mail(to: 'dch92@cornell.edu', subject: 'Poinsettia order confirmation')
+    #mail(to: 'dch92@cornell.edu', subject: 'Poinsettia order confirmation')
   end
 
   def questions(params)
@@ -41,7 +41,7 @@ class OrderMailer < ActionMailer::Base
     @orderID = params[:orderID]
     @message = params[:message]
     @subject = params[:subject]
-    mail(to: 'dch92@cornell.edu', subject: 'Customer Questions')
+    #mail(to: 'dch92@cornell.edu', subject: 'Customer Questions')
     mail(to: 'shuo.ch@icloud.com', subject: 'Customer Questions')
   end
 end
